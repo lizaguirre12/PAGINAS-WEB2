@@ -15,7 +15,7 @@ HTML
     <div class="cv-container">
         <aside class="sidebar">
             <div class="profile-img-container">
-                <img src="CV/foto.jpg" alt="Ana Torres Luna" class="profile-img">
+                <img src="CV/foto.jpg" alt="Lizeth Jimenez" class="profile-img">
             </div>
 
             <div class="sidebar-content">
