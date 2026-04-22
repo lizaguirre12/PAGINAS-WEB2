@@ -1,268 +1,243 @@
-
-HTML
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Ana Torres Luna</title>
+    <title>CV - Lizeth Jimenez Aguirre</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Variables de color para facilitar cambios futuros */
+        :root {
+            --amarillo: #f1c40f; /* El color mostaza de los acentos */
+            --gris-oscuro: #333;
+            --gris-claro: #7f8c8d;
+            --fondo-lateral: #ffffff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Contenedor principal del CV */
+        .cv-container {
+            width: 800px;
+            background-color: white;
+            display: flex; /* Divide el CV en dos columnas principales */
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        /* BARRA LATERAL IZQUIERDA */
+        .sidebar {
+            width: 30%;
+            background-color: var(--fondo-lateral);
+            padding: 30px 20px;
+            border-right: 1px solid #eee;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 20px;
+            /* Nota: La imagen debe estar en la carpeta CV/perfil.jpg */
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--gris-oscuro);
+            border-bottom: 3px solid var(--amarillo); /* Subrayado amarillo característico */
+            display: inline-block;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
+
+        .sidebar-text {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: var(--gris-oscuro);
+            text-align: justify;
+        }
+
+        /* Estilo para las barras de habilidades */
+        .skill-item {
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+        }
+
+        .skill-bar-container {
+            width: 100%;
+            background-color: #eee;
+            height: 6px;
+            margin-top: 5px;
+        }
+
+        .skill-bar-fill {
+            height: 100%;
+            background-color: var(--amarillo);
+        }
+
+        /* Contacto */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+        }
+
+        .contact-icon {
+            width: 18px;
+            margin-right: 10px;
+        }
+
+        /* CUERPO PRINCIPAL DERECHA */
+        .main-content {
+            width: 70%;
+            padding: 40px;
+        }
+
+        .header-info h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: #444;
+            text-transform: none;
+        }
+
+        .header-info .subtitle {
+            color: var(--amarillo);
+            font-size: 1.1rem;
+            margin-top: 5px;
+            font-weight: 300;
+        }
+
+        .section-main-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--gris-oscuro);
+            border-bottom: 3px solid var(--amarillo);
+            display: inline-block;
+            margin: 30px 0 20px;
+        }
+
+        .entry {
+            margin-bottom: 20px;
+        }
+
+        .entry-title {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--gris-oscuro);
+        }
+
+        .entry-desc {
+            font-size: 0.85rem;
+            color: var(--gris-claro);
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .course-item {
+            font-size: 0.75rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
 
     <div class="cv-container">
-        <aside class="sidebar">
-            <div class="profile-img-container">
-                <img src="CV/foto.jpg" alt="Lizeth Jimenez" class="profile-img">
-            </div>
+        <div class="sidebar">
+            <img src="CV/perfil.jpg" alt="Foto de Lizeth" class="profile-img">
 
-            <div class="sidebar-content">
-                <section class="contact">
-                    <h3>CONTACT</h3>
-                    <div class="contact-item">
-                        <img src="CV/pin.png" class="icon"> 
-                        <p>Calle Obregón 10780000 Culiacán</p>
-                    </div>
-                    <div class="contact-item">
-                        <img src="CV/phone.png" class="icon"> 
-                        <p>667.713-1126</p>
-                    </div>
-                    <div class="contact-item">
-                        <img src="CV/mail.png" class="icon"> 
-                        <p>ana.tl@example.com</p>
-                    </div>
-                </section>
-
-                <hr>
-
-                <section class="skills">
-                    <h3>HABILIDADES</h3>
-                    <ul>
-                        <li>Entrenamiento personal</li>
-                        <li>Animación deportiva</li>
-                        <li>Coordinación de actividades</li>
-                        <li>Programas de ejercicio</li>
-                        <li>Habilidades interpersonales</li>
-                        <li>Simpatía y amabilidad</li>
-                    </ul>
-                </section>
-
-                <hr>
-
-                <section class="courses">
-                    <h3>CURSOS</h3>
-                    <p><strong>Entrenamiento Personal</strong> - Editorial Médica Panamericana, 2020</p>
-                    <p><strong>Pilates</strong> - Instituto Superior de Artes Escena 3, 2019</p>
-                </section>
-
-                <hr>
-
-                <section class="certifications">
-                    <h3>CERTIFICACION</h3>
-                    <ul>
-                        <li>Certificación Internacional en Indoor Cycling - Bike Live, 2017</li>
-                        <li>Certificación en "Instructor Especializado en Gimnasio y Musculación" - CEDPRO, 2015</li>
-                    </ul>
-                </section>
-            </div>
-        </aside>
-
-        <main class="main-content">
-            <header class="header-blue">
-                <h1>Ana Torres Luna</h1>
-                <p class="summary">
-                    Instructora de gimnasio con experiencia en acondicionamiento físico. 
-                    Soy una persona enérgica con habilidad para ayudar a los demás a alcanzar 
-                    sus objetivos de entrenamiento mediante sesiones personalizadas. 
-                    Busco unirme a un equipo dinámico y motivado.
+            <div class="sidebar-section">
+                <div class="sidebar-title">Sobre mí</div>
+                <p class="sidebar-text">
+                    Soy estudiante de preparatoria cursando mi sexto semestre con un promedio 9.7. Me considero una persona organizada, responsable, capaz de resolver cualquier problema de manera creativa.
                 </p>
-            </header>
+            </div>
 
-            <section class="experience">
-                <h2>EXPERIENCIA LABORAL</h2>
-
-                <div class="job">
-                    <p><strong>FIT ZONE - Instructora de gimnasio</strong></p>
-                    <p class="date">Culiacán | 11/2020 - Actual</p>
-                    <ul>
-                        <li>Asesoramiento e información al usuario sobre la práctica deportiva y la adopción de hábitos de vida saludables.</li>
-                        <li>Mantenimiento y limpieza de máquinas, materiales y espacio de trabajo.</li>
-                        <li>Organización y dirección de diferentes tipos de actividades deportivas (aerobic, zumba, spinning, etc.).</li>
-                    </ul>
+            <div class="sidebar-section">
+                <div class="sidebar-title">Educación</div>
+                <div class="entry">
+                    <div class="entry-title">2023-2026</div>
+                    <div class="entry-desc">Preparatoria Instituto Cultural Canadiense (curso)</div>
                 </div>
-
-                <div class="job">
-                    <p><strong>Champions Gym - Instructora de gimnasio</strong></p>
-                    <p class="date">Culiacán | 01/2016 - 03/2020</p>
-                    <ul>
-                        <li>Prevención y tratamiento básico de lesiones deportivas.</li>
-                        <li>Información y orientación al usuario sobre cómo utilizar el material deportivo, las máquinas, etc.</li>
-                        <li>Planificación y elaboración de calendarios y horarios de sesiones.</li>
-                    </ul>
+                <div class="entry">
+                    <div class="entry-title">2020-2023</div>
+                    <div class="entry-desc">Secundaria Instituto Cultural Canadiense</div>
                 </div>
+            </div>
 
-                <div class="job">
-                    <p><strong>Dalia Fitness - Monitora de zumba</strong></p>
-                    <p class="date">Culiacán | 03/2011 - 10/2015</p>
-                    <ul>
-                        <li>Planificación y diseño de clases de zumba adaptadas a diferentes niveles y edades.</li>
-                        <li>Adaptación de las clases a las necesidades específicas de alumnos con discapacidades o lesiones.</li>
-                        <li>Mantenimiento y actualización de conocimientos sobre zumba y otras disciplinas.</li>
-                    </ul>
+            <div class="sidebar-section">
+                <div class="sidebar-title">Habilidades</div>
+                <div class="skill-item">Trabajo en equipo <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 90%;"></div></div></div>
+                <div class="skill-item">Organizada <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 85%;"></div></div></div>
+                <div class="skill-item">Responsable <div class="skill-bar-container"><div class="skill-bar-fill" style="width: 100%;"></div></div></div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Contacto</div>
+                <div class="contact-item">
+                    <img src="CV/telefono.png" class="contact-icon"> 712 263 6978
                 </div>
-            </section>
+                <div class="contact-item">
+                    <img src="CV/instagram.png" class="contact-icon"> liz___j
+                </div>
+                <div class="contact-item">
+                    <img src="CV/email.png" class="contact-icon"> jimenezlizeth332@gmail.com
+                </div>
+            </div>
+        </div>
 
-            <hr class="full-hr">
+        <div class="main-content">
+            <div class="header-info">
+                <h1>Lizeth Jimenez<br>Aguirre</h1>
+                <div class="subtitle">estudiante de preparatoria</div>
+            </div>
 
-            <section class="education">
-                <h2>ESTUDIOS</h2>
-                <p><strong>Universidad Autónoma de Sinaloa</strong>, Culiacán | 06/2010</p>
-                <p><em>Licenciatura en Educación Deportiva</em></p>
-            </section>
-        </main>
+            <div class="section-main-title">Experiencia</div>
+            
+            <div class="entry">
+                <div class="entry-title">2023-2026 | PREPARATORIA</div>
+                <p class="entry-desc">
+                    Sigo cursando la preparatoria con promedio de nuevo. En primer año obtuve reconocimiento a nivel estatal en matemáticas en el concurso "MARIAM MIRZAKHANI". En mi segundo año obtuve segundo lugar en rendimiento académico.
+                </p>
+            </div>
+
+            <div class="entry">
+                <div class="entry-title">2020-2023 | SECUNDARIA</div>
+                <p class="entry-desc">En secundaria de igual forma mantuve un promedio de 9.</p>
+            </div>
+
+            <div class="section-main-title">Cursos</div>
+            <ul class="course-list">
+                <li class="course-item">INICIÁNDOME EN LA QUÍMICA / UNAM</li>
+                <li class="course-item">INTRODUCCIÓN A LAS REDES SOCIALES / TEC DE MONTERREY</li>
+                <li class="course-item">HACER NEGOCIOS CON MULTINACIONALES / UNIANDES</li>
+                <li class="course-item">ADMINISTRACIÓN DE RECURSOS HUMANOS / U. PALERMO</li>
+                <li class="course-item">APRENDIENDO A APRENDER / UNIVERSIDAD AUSTRAL</li>
+                <li class="course-item">CÓMO HABLAR BIEN EN PÚBLICO / U. AUTÓNOMA DE BARCELONA</li>
+            </ul>
+        </div>
     </div>
 
 </body>
 </html>
-Código CSS (style.css)
-CSS
-
-/* Configuración General */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    line-height: 1.5;
-}
-
-.cv-container {
-    width: 210mm; /* Tamaño A4 aproximado */
-    min-height: 297mm;
-    margin: 20px auto;
-    background: white;
-    display: flex;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Sidebar Izquierdo */
-.sidebar {
-    width: 35%;
-    background-color: #dee8ef; /* Azul grisáceo claro de la imagen */
-}
-
-.profile-img-container {
-    width: 100%;
-    height: 250px;
-}
-
-.profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
-}
-
-.sidebar-content {
-    padding: 30px 20px;
-}
-
-h3 {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-}
-
-.icon {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-}
-
-hr {
-    border: 0;
-    border-top: 1px solid #99a;
-    margin: 20px 0;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.skills li, .certifications li {
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-}
-
-.skills li::before {
-    content: "• ";
-    color: #333;
-}
-
-/* Columna Derecha */
-.main-content {
-    width: 65%;
-}
-
-.header-blue {
-    background-color: #5b8ba1; /* Azul petróleo de la cabecera */
-    color: white;
-    padding: 40px;
-}
-
-.header-blue h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.summary {
-    font-size: 0.95rem;
-    font-weight: 300;
-}
-
-.experience, .education {
-    padding: 30px 40px;
-}
-
-h2 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #222;
-}
-
-.job {
-    margin-bottom: 25px;
-}
-
-.date {
-    font-size: 0.85rem;
-    color: #666;
-    margin: 5px 0 10px 0;
-}
-
-.experience ul {
-    list-style: disc;
-    padding-left: 20px;
-    font-size: 0.9rem;
-}
-
-.full-hr {
-    margin: 0 40px;
-    border-top: 1px solid #ccc;
-}
 
