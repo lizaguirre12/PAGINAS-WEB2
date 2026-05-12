@@ -47,3 +47,105 @@
 
 </body>
 </html>
+/* Configuración de estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor del documento (Simulación de hoja física) */
+.document-container {
+    background-color: #ffffff;
+    width: 850px;
+    padding: 60px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo del encabezado */
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Manejo de la imagen 'curp' */
+.main-shield {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.header-text h1 {
+    color: #1a4d32; /* Verde institucional aproximado */
+    font-size: 26px;
+    letter-spacing: 1.5px;
+}
+
+.header-text h2 {
+    color: #9f854e; /* Dorado/ocre institucional aproximado */
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+/* Cuerpo de datos */
+.content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.data-group {
+    width: 100%;
+    max-width: 600px;
+}
+
+.field {
+    margin-bottom: 30px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.value {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+/* Resalte específico para la clave */
+.highlight {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+/* Pie de página */
+.footer {
+    border-top: 1px solid #eeeeee;
+    padding-top: 20px;
+    text-align: right;
+    font-size: 11px;
+    color: #666;
+}
