@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constancia CURP - Réplica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="documento-container">
+        <div class="marco-verde">
+            
+            <header class="header-principal">
+                <img src="CV/escudo-nacional.png" alt="Escudo Nacional" class="escudo-top">
+                <h1>ESTADOS UNIDOS MEXICANOS</h1>
+                <p class="subtitulo">CONSTANCIA DE LA CLAVE ÚNICA DE REGISTRO DE POBLACIÓN</p>
+            </header>
+
+            <main class="contenido-curp">
+                <div class="col-izquierda">
+                    <div class="bandera-mexico"></div>
+                    <p class="soy-mexico">Soy México</p>
+                </div>
+
+                <div class="col-central">
+                    <div class="dato-grupo">
+                        <label>Clave:</label>
+                        <span class="valor-clave">JIAL080609MMCMGZA2</span>
+                    </div>
+
+                    <div class="dato-grupo">
+                        <label>Nombre:</label>
+                        <span class="valor-nombre">LIZETH JIMENEZ AGUIRRE</span>
+                    </div>
+
+                    <div class="dato-grupo inline">
+                        <label>Entidad de registro:</label>
+                        <span class="valor-entidad">MEXICO</span>
+                    </div>
+                </div>
+
+                <div class="col-derecha">
+                    <div class="codigo-qr">
+                        <img src="CV/qr-code.png" alt="Código QR">
+                    </div>
+                </div>
+            </main>
+
+            <footer class="footer-logos">
+                <img src="CV/logo-gobernacion.png" alt="Gobernación" class="logo-gob">
+                <div class="separador-footer"></div>
+                <span class="renapo-texto">RENAPO</span>
+            </footer>
+
+        </div>
+    </div>
+
+    <p class="nota-certificacion">CURP Certificada: verificada con el Registro Civil</p>
+
+</body>
+</html>
+
+/* Configuración General */
+body {
+    font-family: 'Arial', sans-serif; /* Se usa Arial por ser estándar y similar a la fuente oficial */
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor del Documento */
+.documento-container {
+    background-color: white;
+    width: 800px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+/* El marco verde característico */
+.marco-verde {
+    border: 8px double #4d6e51; /* Color verde olivo oficial */
+    padding: 20px;
+    height: 100%;
+}
+
+/* Encabezado */
+.header-principal {
+    text-align: center;
+    color: #4d6e51;
+}
+
+.escudo-top {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.subtitulo {
+    font-size: 14px;
+    font-weight: bold;
+    color: #b39359; /* Dorado/Café suave de la constancia */
+    margin-top: 5px;
+}
+
+/* Cuerpo del documento */
+.contenido-curp {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+/* Columna Izquierda */
+.col-izquierda {
+    width: 15%;
+    text-align: center;
+}
+
+.bandera-mexico {
+    width: 50px;
+    height: 30px;
+    background: linear-gradient(to right, #006847 33%, #fff 33%, #fff 66%, #ce1126 66%);
+    margin: 0 auto;
+    border: 1px solid #ddd;
+}
+
+.soy-mexico {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    color: #a0a0a0;
+    font-size: 18px;
+}
+
+/* Columna Central (Datos) */
+.col-central {
+    width: 60%;
+}
+
+.dato-grupo {
+    margin-bottom: 20px;
+}
+
+
+.dato-grupo label {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.valor-clave, .valor-nombre {
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+
+.valor-entidad {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Columna Derecha (QR) */
+.codigo-qr img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Footer */
+.footer-logos {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.logo-gob {
+    height: 40px;
+    margin-right: 20px;
+}
+
+.renapo-texto {
+    font-weight: bold;
+    color: #b39359;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.nota-certificacion {
+    width: 800px;
+    text-align: right;
+    font-size: 10px;
+    margin-top: 5px;
+}
